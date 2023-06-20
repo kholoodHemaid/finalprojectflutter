@@ -71,6 +71,8 @@ flutter:
     - images/mobile-1.svg
     - images/mobile1.png
     - images/mobile2.png
+    - images/c.png
+    - images/g.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
