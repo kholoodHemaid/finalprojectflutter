@@ -1,0 +1,19 @@
+{
+  "email":"email",
+  "password":"password",
+  "next":"Next",
+  "p":"Fast reservation with technicians",
+  "remberme":"Remember me",
+  "forgotpassword":"Forgot Password?",
+  "newmeber":"New Member?",
+  "login":"Login",
+  "getstartnow":"Get Start Now !",
+  "serviceprovider":"Service provider",
+  "customer":"Customer",
+  "home":"Home",
+  "service":"Service",
+  "singin":"Sing In",
+  "haveaccount":"Have Account?",
+  "fullname":"Full Name",
+   "ptwo":"I Read and Accept Home Service Terms & Conditions"
+}
