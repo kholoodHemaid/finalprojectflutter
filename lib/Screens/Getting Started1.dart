@@ -69,7 +69,7 @@ class _GettingStarted1State extends State<GettingStarted1> {
                       height: 130,
                       child: Center(
                         child: Image.asset(
-                          "images/g.svg",
+                          "images/g1.svg",
                           fit: BoxFit.contain,
                           width: 50,
                           height: 50,
