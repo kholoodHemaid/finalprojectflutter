@@ -1,19 +1,17 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:finalprojectflutter/constant.dart';
-import 'package:finalprojectflutter/widgets/MyCard.dart';
+import 'package:finalprojectflutter/widgets/TextFiledWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-
-class ChoiceCard extends StatefulWidget {
-  const ChoiceCard({Key? key}) : super(key: key);
+class CardInfo extends StatefulWidget {
+  const CardInfo({Key? key}) : super(key: key);
 
   @override
-  State<ChoiceCard> createState() => _ChoiceCardState();
+  State<CardInfo> createState() => _CardInfoState();
 }
 
-class _ChoiceCardState extends State<ChoiceCard> {
+class _CardInfoState extends State<CardInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +21,7 @@ class _ChoiceCardState extends State<ChoiceCard> {
             Expanded(
               flex: 1,
               child: Container(
-                height: 500,
+                height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.vertical(
                     bottom: Radius.circular(60),
@@ -73,7 +71,7 @@ class _ChoiceCardState extends State<ChoiceCard> {
                         alignment: AlignmentDirectional.topStart,
                       ),
                     ),
-                    SizedBox(height: 50,)
+
                   ],
 
                 ),
@@ -83,56 +81,41 @@ class _ChoiceCardState extends State<ChoiceCard> {
             ),
 
             Expanded(
-              flex: 1,
+              flex:2,
               child: Container(
-                width: double.infinity,
-                height: double.infinity,
+
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: DottedBorder(
-                        dashPattern: [5, 5],
-                        color: kTextLightColor,
+                      padding: const EdgeInsets.only(left: 50,top: 10
+                      ),
+                      child: Container(
 
-                        strokeWidth: 2,
-                        child: Container(
-                          width: 350,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
+                        decoration: BoxDecoration(
 
-                            border: Border.all(
-                              style: BorderStyle.none,
-                            ),
+
+                          border: Border.all(
+                            style: BorderStyle.none,
                           ),
-                          child: Row(
-                            children: [
-                              SizedBox(width: 10),
-                              Image.asset(
-                                'images/camera.png',
-                                width: 50,
-                                height: 50,
-                              ),
-                              SizedBox(width: 90),
-                              Text(
-                                AppLocalizations.of(context)!.imageproblem ?? 'Image Problem',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
-
                         ),
+                        child: Row(
+                          children: [
+
+                            Image.asset(
+                              'images/graph.png',
+                              width: 300,
+                              height: 150,
+                            ),
+
+
+                          ],
+                        ),
+
                       ),
 
                     ),
-                    Container(
-                      margin: EdgeInsets.only(right: 60),
-                      child: Text(
-                        'image must be no more than 2 MB Max 5 Image',style: TextStyle(color: Colors.grey),
-                      ),
-                    ),
+
 
 
                   ],
@@ -140,16 +123,15 @@ class _ChoiceCardState extends State<ChoiceCard> {
 
               ),
             ),
-
             Expanded(
-              flex: 3,
+              flex:3,
               child: Container(
                 child: Column(
                   children: [
-                    SizedBox(height: 40,),
+
                     Container(
-                       margin: EdgeInsets.only(right: 20),
-                      padding: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(right: 20),
+
                       decoration: BoxDecoration(
 
                         border: Border.all(
@@ -158,8 +140,8 @@ class _ChoiceCardState extends State<ChoiceCard> {
 
                         ),
                       ),
-                      width: 300,
-                      height: 200,
+                      width: 350,
+                      height:100,
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'More Details About Problem …...',
@@ -180,15 +162,40 @@ class _ChoiceCardState extends State<ChoiceCard> {
                       //   'More Details About Problem …...',style: TextStyle(color: Colors.grey),
                       // ),
                     ),
+
+                    Padding(
+                      padding: const EdgeInsets.all(30),
+                      child: TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: '5000',
+                          prefix: Image.asset('images/number.png',width: 100,height: 20,),
+                          enabledBorder: OutlineInputBorder(
+
+                            borderSide: BorderSide(style: BorderStyle.solid,width:.4),
+                            borderRadius: BorderRadius.circular(3),
+
+
+
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(style: BorderStyle.solid,color: kTextLightColor),
+                            borderRadius: BorderRadius.circular(3),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
 
 
+
                 ),
+
               ),
             ),
-            SizedBox(height: 100,),
+            Spacer(),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsetsDirectional.symmetric(horizontal: 20,vertical: 10),
               child: Container(
                 width: double.infinity,
                 height: 40,
@@ -197,14 +204,78 @@ class _ChoiceCardState extends State<ChoiceCard> {
                   //   context,
                   //   MaterialPageRoute(builder: (context) => ThirdScreen()),
                   // );
-                }, child: Text(AppLocalizations.of(context)!.next ??'Next',style: TextStyle(
+                }, child: Text(AppLocalizations.of(context)!.addorder ??'Add Order',style: TextStyle(
                   color: Colors.white,
                 ),
                 ),
                     style: ButtonStyle(backgroundColor:MaterialStateProperty.all<Color>(Colors.black))),
               ),
             ),
-            SizedBox(height: 20,)
+
+            // Expanded(
+            //   flex: 3,
+            //   child: Container(
+            //     child: Column(
+            //       children: [
+            //         SizedBox(height: 40,),
+            //         Container(
+            //           margin: EdgeInsets.only(right: 20),
+            //           padding: EdgeInsets.all(10),
+            //           decoration: BoxDecoration(
+            //
+            //             border: Border.all(
+            //               color: Colors.grey,
+            //               width: 2,
+            //
+            //             ),
+            //           ),
+            //           width: 300,
+            //           height: 200,
+            //           child: TextField(
+            //             decoration: InputDecoration(
+            //               hintText: 'More Details About Problem …...',
+            //               enabledBorder: OutlineInputBorder(
+            //
+            //                 borderSide: BorderSide(style: BorderStyle.none),
+            //                 borderRadius: BorderRadius.circular(3),
+            //
+            //
+            //               ),
+            //               focusedBorder: OutlineInputBorder(
+            //                 borderSide: BorderSide(style: BorderStyle.none),
+            //                 borderRadius: BorderRadius.circular(3),
+            //               ),
+            //             ),
+            //           ),
+            //           // child: Text(
+            //           //   'More Details About Problem …...',style: TextStyle(color: Colors.grey),
+            //           // ),
+            //         ),
+            //       ],
+            //
+            //
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: 100,),
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: Container(
+            //     width: double.infinity,
+            //     height: 40,
+            //     child: TextButton(onPressed: (){
+            //       // Navigator.push(
+            //       //   context,
+            //       //   MaterialPageRoute(builder: (context) => ThirdScreen()),
+            //       // );
+            //     }, child: Text(AppLocalizations.of(context)!.next ??'Next',style: TextStyle(
+            //       color: Colors.white,
+            //     ),
+            //     ),
+            //         style: ButtonStyle(backgroundColor:MaterialStateProperty.all<Color>(Colors.black))),
+            //   ),
+            // ),
+
 
 
           ],

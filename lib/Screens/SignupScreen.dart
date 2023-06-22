@@ -110,7 +110,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                               TextFiledWidget(
                                   obsecure: false,
-                                  inputType: TextInputType.number,hintText: "50000"),
+                                  inputType: TextInputType.number,hintText: "50000",),
                               SizedBox(height: 15),
                               TextFiledWidget(
                                 obsecure: true,

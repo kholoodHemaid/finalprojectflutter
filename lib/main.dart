@@ -1,4 +1,6 @@
 import 'package:finalprojectflutter/Screens/%20Login_Filled.dart';
+import 'package:finalprojectflutter/Screens/Card%20Info__Filled.dart';
+import 'package:finalprojectflutter/Screens/CardInfo.dart';
 import 'package:finalprojectflutter/Screens/ChoiceCard.dart';
 import 'package:finalprojectflutter/Screens/Getting%20Started1.dart';
 import 'package:finalprojectflutter/Screens/GettingStartedScreen.dart';
@@ -45,9 +47,11 @@ class MyApp extends StatelessWidget {
       //   '/login_filled': (context) => Login_Filled(),
       //   '/gettingstarted1': (context) => GettingStarted1(),
       //   '/choicecard': (context) => ChoiceCard(),
+     //       '/cardinfo': (context) => CardInfo(),
+     //   '/cardinfo__filled': (context) => CardInfo__Filled(),
       //
       // },
-      home: ChoiceCard(),
+      home: CardInfo__Filled(),
 
     );
   }

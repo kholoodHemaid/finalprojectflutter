@@ -6,7 +6,7 @@ class TextFiledWidget extends StatelessWidget {
   final TextInputType inputType;
   final bool obsecure;
 
-  final IconData ?prefixIcon  ;
+  final String ?prefixIcon  ;
   final IconData ?suffixIcon;
 
    TextFiledWidget(
@@ -31,7 +31,7 @@ class TextFiledWidget extends StatelessWidget {
         hintText: ('$hintText'),
         //   fillColor: Colors.black,
         suffixIcon: Icon(suffixIcon),
-        prefix:  Icon(prefixIcon),
+        prefix:  Image.asset('prefixIcon',width: 100,height: 20,),
         enabledBorder: OutlineInputBorder(
 
           borderSide: BorderSide(style: BorderStyle.solid,width:.4),
