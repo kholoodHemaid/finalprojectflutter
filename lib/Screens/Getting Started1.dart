@@ -1,8 +1,9 @@
 import 'package:finalprojectflutter/constant.dart';
+import 'package:finalprojectflutter/widgets/MyCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 
 class GettingStarted1 extends StatefulWidget {
   const GettingStarted1({Key? key}) : super(key: key);
@@ -14,36 +15,63 @@ class GettingStarted1 extends StatefulWidget {
 class _GettingStarted1State extends State<GettingStarted1> {
   @override
   Widget build(BuildContext context) {
-    int currentIndex =0;
+    int currentIndex = 0;
+    int selectedIndex = 0;
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: true,
-        // showUnselectedLabels: false,
-        selectedFontSize: 20,
-        unselectedFontSize:20 ,
-        selectedItemColor: Color(0xFF8D0000),
-        unselectedItemColor: Colors.grey,
+      bottomNavigationBar: Container(
+        color: kTextLightColor,
+        child: BottomNavigationBar(
+          showSelectedLabels: true,
 
-        currentIndex: currentIndex,
-        onTap: (int index){
-          setState(() {
-            currentIndex=index;
-          });
-
-        },
-
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home",),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications),label: "Notifications",),
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile",),
+          backgroundColor: kTextLightColor,
+        showUnselectedLabels: true,
+          selectedIconTheme: IconThemeData(color: Colors.amber),
+          selectedLabelStyle: TextStyle(fontSize: 15),
 
 
+          unselectedLabelStyle: TextStyle(fontSize: 15),
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
 
 
-        ],
+          currentIndex: currentIndex,
+          onTap: (int index) {
+            setState(() {
+              currentIndex = index;
+            });
+
+          },
+
+
+
+          items: [
+            BottomNavigationBarItem(
+                icon: Image.asset('images/eee.png',height: 25,width: 25),
+                label: "Service",
+                backgroundColor: kTextLightColor),
+            BottomNavigationBarItem(
+                icon: Image.asset('images/order.png',height: 25,width: 25),
+                label: "Orders",
+                backgroundColor: kTextLightColor
+                ),
+            BottomNavigationBarItem(
+                icon: Image.asset('images/user.png',height: 25,width: 25),
+                label: "User",
+                backgroundColor: kTextLightColor
+                ),
+            BottomNavigationBarItem(
+                icon: Image.asset('images/more.png',height: 25,width: 25),
+                label: "More",
+                backgroundColor: kTextLightColor
+                ),
+
+          ],
+
+        ),
+
       ),
-      body: SafeArea(
 
+      body: SafeArea(
         child: Column(
           children: [
             Expanded(
@@ -67,33 +95,38 @@ class _GettingStarted1State extends State<GettingStarted1> {
                     Container(
                       width: 120,
                       height: 130,
-                      child: Center(
-                        child: Image.asset(
-                          "images/g1.svg",
-                          fit: BoxFit.contain,
-                          width: 50,
-                          height: 50,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Align(
+                          alignment: Alignment.topCenter,
+                          child: Image.asset(
+                            "images/eee.png",
+                            fit: BoxFit.contain,
+                            width: 50,
+                            height: 50,
+                          ),
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
+                        top: 45,
                         left: 40,
                       ),
                       // child: Column(
-                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   mainAxisAlignment: MainAxisAlignment.start,
                       //   crossAxisAlignment: CrossAxisAlignment.start,
                       //   children: [
                       //     Text(
                       //       'Home',
                       //       style: TextStyle(
                       //           color: Colors.white,
-                      //           fontSize: 15,
+                      //           fontSize: 10,
                       //           fontWeight: FontWeight.bold),
                       //     ),
                       //     Text(
                       //       'Service',
-                      //       style: TextStyle(color: Colors.white, fontSize: 10),
+                      //       style: TextStyle(color: Colors.white, fontSize: 5),
                       //     ),
                       //   ],
                       // ),
@@ -115,9 +148,7 @@ class _GettingStarted1State extends State<GettingStarted1> {
                       padding: const EdgeInsets.all(20),
                       child: Align(
                         child: IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
+                          onPressed: () {},
                           icon: Icon(
                             Icons.notifications_none,
                             color: Colors.white,
@@ -128,7 +159,7 @@ class _GettingStarted1State extends State<GettingStarted1> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 100),
+                      padding: const EdgeInsets.only(top: 70),
                       child: Align(
                         alignment: AlignmentDirectional.center,
                         child: Container(
@@ -156,69 +187,84 @@ class _GettingStarted1State extends State<GettingStarted1> {
             ),
             Container(
               padding: const EdgeInsets.only(top: 20),
-              child: Text(AppLocalizations.of(context)!.selectservic??"Select Service",style: TextStyle(color:kTextLightColor,fontSize: 18 )),
+              child: Text(
+                  AppLocalizations.of(context)!.selectservic ??
+                      "Select Service",
+                  style: TextStyle(color: kTextLightColor, fontSize: 18)),
             ),
             Expanded(
               flex: 3,
               child: Container(
-
+                padding: EdgeInsetsDirectional.all(15),
                 decoration: BoxDecoration(color: Colors.white),
-                child: GridView.builder(
-                  itemCount: 12,
-                  padding: const EdgeInsets.all(30),
+                child: GridView(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                      crossAxisCount: 3,
+                    childAspectRatio: 1,),
+                       children: [
 
-                    crossAxisSpacing: 4.0,
-                    mainAxisSpacing: 8.0,
-                  ),
-                  itemBuilder: (context, index) {
-                    return Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                              width: 100,
-                              height: 100,
 
-                            decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset: Offset(0, 3),
-                                  ),
-                                ],
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(10),
-                                ),
-                              border: Border.all(color: Color(0xFFDE1487), width: 0.3),
 
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Column(children: [
-                                Image.asset("images/Layer_21.png",width: 50,height: 50),
-                                SizedBox(height: 5,),
-                                Text('نص العنصر'),
-                              ],),
-                            )
-                          ),
-                        ],
-                      ),
-                    );
-                  },
+
+                        MyCard(
+                            nameImage: 'images/1.png',
+                            text: AppLocalizations.of(context)!.carpenter ??
+                                "Carpenter"),
+                        MyCard(
+                            nameImage: 'images/2.png',
+                            text: AppLocalizations.of(context)!.carpenter ??
+                                "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/3.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/4.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/5.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/6.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/7.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/1.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/5.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/1.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/2.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+                         MyCard(
+                             nameImage: 'images/3.png',
+                             text: AppLocalizations.of(context)!.carpenter ??
+                                 "Carpenter"),
+    ],
+
+
+
                 ),
               ),
-
             ),
 
           ],
 
         ),
-
 
       ),
     );

@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:finalprojectflutter/Screens/Onboarding2.dart';
 import 'package:finalprojectflutter/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class Onboarding1 extends StatefulWidget {
