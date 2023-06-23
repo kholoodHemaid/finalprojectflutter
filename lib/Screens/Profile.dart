@@ -14,64 +14,15 @@ class  Profile  extends StatefulWidget {
 }
 
 class _ProfileState extends State< Profile > {
-  int currentIndex = 0;
-  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: Container(
-        color: kTextLightColor,
-        child: BottomNavigationBar(
-          showSelectedLabels: true,
-
-          backgroundColor: kTextLightColor,
-          showUnselectedLabels: true,
-          selectedIconTheme: IconThemeData(color: Colors.amber),
-          selectedLabelStyle: TextStyle(fontSize: 15),
-
-
-          unselectedLabelStyle: TextStyle(fontSize: 15),
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white,
-
-
-          currentIndex: currentIndex,
-          onTap: (int index) {
-            setState(() {
-              currentIndex = index;
-            });
-
-          },
+    return
 
 
 
-          items: [
-            BottomNavigationBarItem(
-                icon: Image.asset('images/eee.png',height: 25,width: 25),
-                label: "Service",
-                backgroundColor: kTextLightColor),
-            BottomNavigationBarItem(
-                icon: Image.asset('images/order.png',height: 25,width: 25),
-                label: "Orders",
-                backgroundColor: kTextLightColor
-            ),
-            BottomNavigationBarItem(
-                icon: Image.asset('images/user.png',height: 25,width: 25),
-                label: "User",
-                backgroundColor: kTextLightColor
-            ),
-            BottomNavigationBarItem(
-                icon: Image.asset('images/more.png',height: 25,width: 25),
-                label: "More",
-                backgroundColor: kTextLightColor
-            ),
 
-          ],
-
-        ),
-
-      ),
-      body: Stack(
+    Stack(
         children: [
           Container(
             height: 150,
@@ -234,7 +185,7 @@ class _ProfileState extends State< Profile > {
 
           ),
         ],
-      ),
+
     );
   }
 }

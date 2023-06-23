@@ -4,6 +4,7 @@ import 'package:finalprojectflutter/Screens/CardInfo.dart';
 import 'package:finalprojectflutter/Screens/ChoiceCard.dart';
 import 'package:finalprojectflutter/Screens/Getting%20Started1.dart';
 import 'package:finalprojectflutter/Screens/GettingStartedScreen.dart';
+import 'package:finalprojectflutter/Screens/Main_Screen.dart';
 import 'package:finalprojectflutter/Screens/Onboarding1.dart';
 import 'package:finalprojectflutter/Screens/Onboarding2.dart';
 import 'package:finalprojectflutter/Screens/Onboarding3.dart';
@@ -38,23 +39,24 @@ class MyApp extends StatelessWidget {
         Locale("en"),
       ],
 
-      // initialRoute: '/splashScreen',
-      // routes: {
-      //   '/splashScreen': (context) => Splash_Screen(),
-      //   'Onboarding1':(context) => Onboarding1(),
-      //   'Onboarding2':(context) => Onboarding2(),
-      //   'Onboarding3':(context) => Onboarding3(),
-      //   '/signupscreen': (context) => SignupScreen(),
-      //   '/gettingstartedscreen': (context) => GettingStartedScreen(),
-      //   '/login_filled': (context) => Login_Filled(),
-      //   '/gettingstarted1': (context) => GettingStarted1(),
-      //   '/choicecard': (context) => ChoiceCard(),
-     //       '/cardinfo': (context) => CardInfo(),
-     //   '/cardinfo__filled': (context) => CardInfo__Filled(),
-      // '/profile':(context) =>Profile(),
-      //'/profile2':(context) =>Profile2(),
-      // },
-      home: Profile2(),
+      initialRoute: '/splashScreen',
+      routes: {
+        '/splashScreen': (context) => Splash_Screen(),
+        'Onboarding1':(context) => Onboarding1(),
+        'Onboarding2':(context) => Onboarding2(),
+        'Onboarding3':(context) => Onboarding3(),
+        '/signupscreen': (context) => SignupScreen(),
+        '/gettingstartedscreen': (context) => GettingStartedScreen(),
+        '/login_filled': (context) => Login_Filled(),
+        '/gettingstarted1': (context) => GettingStarted1(),
+        '/choicecard': (context) => ChoiceCard(),
+           '/cardinfo': (context) => CardInfo(),
+       '/cardinfo__filled': (context) => CardInfo__Filled(),
+      '/profile':(context) =>Profile(),
+      '/profile2':(context) =>Profile2(),
+       '/mainscreen':(context) =>MainScreen(),
+      },
+     // home: MainScreen(),
 
     );
   }

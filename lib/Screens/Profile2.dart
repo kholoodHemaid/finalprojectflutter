@@ -1,3 +1,6 @@
+import 'package:finalprojectflutter/Model.dart';
+import 'package:finalprojectflutter/Screens/Getting%20Started1.dart';
+import 'package:finalprojectflutter/Screens/Profile.dart';
 import 'package:finalprojectflutter/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -5,72 +8,35 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/Text_Icon.dart';
+
 class Profile2 extends StatefulWidget {
   const Profile2({Key? key}) : super(key: key);
 
   @override
   State<Profile2> createState() => _Profile2State();
 }
+List<BottonNavModel> bottomnav = <BottonNavModel>[
+  BottonNavModel(
+    GettingStarted1(),
+  ),
+  BottonNavModel(
+    GettingStarted1(),
+  ),
+  BottonNavModel(
+    Profile(),
+  ),
+  BottonNavModel(
+    Profile2(),
+  ),
+];
 
 class _Profile2State extends State<Profile2> {
   int currentIndex = 0;
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: Container(
-        color: kTextLightColor,
-        child: BottomNavigationBar(
-          showSelectedLabels: true,
-
-          backgroundColor: kTextLightColor,
-          showUnselectedLabels: true,
-          selectedIconTheme: IconThemeData(color: Colors.amber),
-          selectedLabelStyle: TextStyle(fontSize: 15),
-
-
-          unselectedLabelStyle: TextStyle(fontSize: 15),
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white,
-
-
-          currentIndex: currentIndex,
-          onTap: (int index) {
-            setState(() {
-              currentIndex = index;
-            });
-
-          },
-
-
-
-          items: [
-            BottomNavigationBarItem(
-                icon: Image.asset('images/eee.png',height: 25,width: 25),
-                label: "Service",
-                backgroundColor: kTextLightColor),
-            BottomNavigationBarItem(
-                icon: Image.asset('images/order.png',height: 25,width: 25),
-                label: "Orders",
-                backgroundColor: kTextLightColor
-            ),
-            BottomNavigationBarItem(
-                icon: Image.asset('images/user.png',height: 25,width: 25),
-                label: "User",
-                backgroundColor: kTextLightColor
-            ),
-            BottomNavigationBarItem(
-                icon: Image.asset('images/more.png',height: 25,width: 25),
-                label: "More",
-                backgroundColor: kTextLightColor
-            ),
-
-          ],
-
-        ),
-
-      ),
-      body: Column(
+    return
+      Column(
         children: [
           Container(
             height: 120,
@@ -179,7 +145,7 @@ class _Profile2State extends State<Profile2> {
 
           ),
         ],
-      ),
+
     );
   }
 }
