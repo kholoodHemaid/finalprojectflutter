@@ -27,8 +27,15 @@
          "gotohome":"اذهب الى الصفحة الرئيسة",
          "singout":"تسجيل خروج",
          "languge":"اللغة",
-             "myrate":"اسعاري",
-             "contact":"التواصل",
-             "shareapp":"مشاركة التطبيق"
+         "myrate":"اسعاري",
+         "contact":"التواصل",
+         "shareapp":"مشاركة التطبيق",
+         "changepassword":"Change Password",
+          "fqs":"اسئلة ",
+          "aboutapp":"عن التطبيق",
+          "termscondtitions":"القيود والقوانين",
+          "privicypolicy":"سياسة الخصوصية",
+          "rate app":"قيم التطبيق",
+          "deleteaccount":"حذف الحساب"
 
 }

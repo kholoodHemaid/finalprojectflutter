@@ -29,5 +29,13 @@
     "languge":"Languge",
     "myrate":"My Rates",
     "contact":"Contact Us",
-    "shareapp":"Share APP"
+    "shareapp":"Share APP",
+    "changepassword":"Change Password",
+    "fqs":"FAQ's",
+    "aboutapp":"About App",
+    "termscondtitions":"Terms & Conditions",
+    "privicypolicy":"Privacy Policy",
+    "rate app":"Rate App",
+    "deleteaccount":"Delete Account"
+
 }
