@@ -31,11 +31,14 @@ class MyCard extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(15),
-          child: Column(children: [
-            Image.asset("$nameImage"),
-            SizedBox(height:8,),
-            Text('$text'),
-          ],),
+          child: Expanded(
+            flex: 1,
+            child: Column(children: [
+              Image.asset("$nameImage"),
+              SizedBox(height:8,),
+              Text('$text'),
+            ],),
+          ),
         )
     );
   }

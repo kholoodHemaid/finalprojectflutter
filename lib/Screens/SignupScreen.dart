@@ -40,25 +40,14 @@ class _SignupScreenState extends State<SignupScreen> {
                   alignment: Alignment.center,
                   children: [ Container(
                     width: 150,
-                    height: 150,
-                    // decoration: BoxDecoration(
-                    //   gradient: LinearGradient(
-                    //     colors: [
-                    //       Color(0xFFFFFFFF),
-                    //       Color(0xffAFE2FF)
-                    //     ], // Define your gradient colors
-                    //     begin: Alignment
-                    //         .bottomLeft, // Define the starting point of the gradient
-                    //     end: Alignment
-                    //         .centerRight, // Define the ending point of the gradient
-                    //   ),
-                    // ),
+                    height: 100,
+
                     child: Center(
                       child: Image.asset(
                         "images/Layer_21.png",
                         fit: BoxFit.contain,
                         width: 150,
-                        height: 150,
+                        height: 100,
                       ),
 
                     ),
@@ -80,8 +69,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 10,),
             Expanded(
-              flex: 4,
+              flex: 3,
               child: Container(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -95,27 +85,99 @@ class _SignupScreenState extends State<SignupScreen> {
                             child: Text(AppLocalizations.of(context)!.serviceprovider??"Service Provider"),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                Container(
+                                  width: 10,
+                                  height: 2,
+                                  color: kTextLightColor,
+                                );
+                              });
+                            },
                             child: Text(AppLocalizations.of(context)!.customer??"Customer"),
                           ),
                         ],
                       ),
-                      SizedBox(height: 7),
+                      SizedBox(height: 17),
                       Padding(
-                        padding: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(3),
                         child: Align(
                           alignment: Alignment.center,
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
+
                             children: [
-                              TextFiledWidget(
-                                  obsecure: false,
-                                  inputType: TextInputType.number,hintText: "50000",),
-                              SizedBox(height: 15),
-                              TextFiledWidget(
-                                obsecure: true,
-                                inputType: TextInputType.number,hintText: "********",suffixIcon: Icons.remove_red_eye_sharp,
+                              // TextFiledWidget(
+                              //     obsecure: false,
+                              //     inputType: TextInputType.number,hintText: "50000",
+                              //         prefixIcon: 'images/number.png',),
+                            TextField(
+                            maxLines: 1,
+                            textAlign: TextAlign.left,
+
+                            obscureText: false,
+                            keyboardType: TextInputType.number,
+
+
+                            decoration: InputDecoration(
+
+                              //label: Text('$LabelText'),
+                              hintText: ('50000'),
+                              //   fillColor: Colors.black,
+
+                                prefix:  Image.asset('images/number.png',width: 100,height: 15),
+                              enabledBorder: OutlineInputBorder(
+
+                                borderSide: BorderSide(style: BorderStyle.solid,width:.4),
+                                borderRadius: BorderRadius.circular(3),
+
+
                               ),
+
+
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(style: BorderStyle.solid,color: kTextLightColor),
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+
+                            ),
+                          ),
+                              SizedBox(height: 8),
+                              TextField(
+                                maxLines: 1,
+                                textAlign: TextAlign.center,
+
+                                obscureText: true,
+                                keyboardType: TextInputType.number,
+
+
+                                decoration: InputDecoration(
+
+                                  //label: Text('$LabelText'),
+                                  fillColor: Colors.grey,
+                                  hintText: ('********'),
+                                  suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                                  //   fillColor: Colors.black,
+
+                                  enabledBorder: OutlineInputBorder(
+
+                                    borderSide: BorderSide(style: BorderStyle.solid,width:.4),
+                                    borderRadius: BorderRadius.circular(3),
+
+
+                                  ),
+
+
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(style: BorderStyle.solid,color: kTextLightColor),
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+
+                                ),
+                              ),
+                              // TextFiledWidget(
+                              //   obsecure: true,
+                              //   inputType: TextInputType.number,hintText: "********",suffixIcon: Icons.remove_red_eye_sharp,
+                              // ),
                               SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -146,22 +208,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  // RichText(
-                                  //   text: const TextSpan(
-                                  //       text: 'New Member?\n',
-                                  //       style: TextStyle(color: Colors.black),
-                                  //       children: [
-                                  //         TextSpan(
-                                  //           text: 'Sign in',
-                                  //           style: TextStyle(
-                                  //             color: kTextLightColor,
-                                  //             fontSize: 15,
-                                  //             decoration: TextDecoration.underline,
-                                  //           ),
-                                  //         ),
-                                  //       ]
-                                  //   ),
-                                  // ),
+
 
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -213,7 +260,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                                   Container(
                                     width: 140, // set the width
-                                    height: 30,
+                                    height: 40,
                                     decoration: UnderlineTabIndicator(
                                       borderSide: BorderSide(width: 2,color: kTextLightColor)
                                     ),

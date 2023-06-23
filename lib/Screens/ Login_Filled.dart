@@ -1,4 +1,5 @@
 import 'package:finalprojectflutter/Screens/Getting%20Started1.dart';
+import 'package:finalprojectflutter/Screens/Main_Screen.dart';
 import 'package:finalprojectflutter/Screens/SignupScreen.dart';
 import 'package:finalprojectflutter/constant.dart';
 import 'package:finalprojectflutter/widgets/TextFiledWidget.dart';
@@ -162,7 +163,7 @@ class _Login_FilledState extends State<Login_Filled> {
                                           Navigator.push(
                                             context, MaterialPageRoute(
                                             builder: (context) =>
-                                                GettingStarted1()),
+                                                MainScreen()),
                                           );
 
                                           setState(() {
@@ -204,7 +205,7 @@ class _Login_FilledState extends State<Login_Filled> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                GettingStarted1()),
+                                                MainScreen()),
                                       );
                                     },
                                     child: Text(AppLocalizations.of(context)!.login??"Login",

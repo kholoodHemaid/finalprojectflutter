@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
       '/profile2':(context) =>Profile2(),
        '/mainscreen':(context) =>MainScreen(),
       },
-     // home: MainScreen(),
+
 
     );
   }

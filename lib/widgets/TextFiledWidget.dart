@@ -31,7 +31,7 @@ class TextFiledWidget extends StatelessWidget {
         hintText: ('$hintText'),
         //   fillColor: Colors.black,
         suffixIcon: Icon(suffixIcon),
-        prefix:  Image.asset('prefixIcon',width: 100,height: 20,),
+      //  prefix:  Image.asset('prefixIcon'),
         enabledBorder: OutlineInputBorder(
 
           borderSide: BorderSide(style: BorderStyle.solid,width:.4),
