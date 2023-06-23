@@ -35,7 +35,8 @@
           "aboutapp":"عن التطبيق",
           "termscondtitions":"القيود والقوانين",
           "privicypolicy":"سياسة الخصوصية",
-          "rate app":"قيم التطبيق",
-          "deleteaccount":"حذف الحساب"
+          "rateapp":"قيم التطبيق",
+          "deleteaccount":"حذف الحساب",
+          "more":"المزيد"
 
 }

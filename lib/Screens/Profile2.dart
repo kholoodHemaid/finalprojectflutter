@@ -88,7 +88,7 @@ class _Profile2State extends State<Profile2> {
               alignment: Alignment.topCenter,
               children: [
                 Positioned(
-                  top:15,
+                  top:25,
                   child: Container(
 
                     width: 120,
@@ -102,7 +102,7 @@ class _Profile2State extends State<Profile2> {
                       child: Align(
                           alignment: Alignment.topCenter,
                           child: Text(
-                              AppLocalizations.of(context)!.order ?? 'Order',
+                              AppLocalizations.of(context)!.more?? 'More',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
@@ -153,15 +153,19 @@ class _Profile2State extends State<Profile2> {
                     color: Colors.white,
                   ),
                   width: 410,
-                  height: 400,
+                  height: 500,
 
                   child: ListView(
                     children: [
 
-                      Text_Icon(text:AppLocalizations.of(context)!.myrate ?? 'Change Password',iconsdata: Icons.arrow_forward_ios_outlined,textoptional: 'English   '),
-                      Text_Icon(text:AppLocalizations.of(context)!.myrate ?? 'My Rates',iconsdata: Icons.arrow_forward_ios_outlined,),
-                      Text_Icon(text:AppLocalizations.of(context)!.contact ?? 'Contact us',iconsdata: Icons.arrow_forward_ios_outlined,),
-                      Text_Icon(text:AppLocalizations.of(context)!.shareapp ?? 'Share App',iconsdata: Icons.arrow_forward_ios_outlined,),
+                      Text_Icon(text:AppLocalizations.of(context)!.changepassword ?? 'Change Password',iconsdata: Icons.arrow_forward_ios_outlined,),
+                      Text_Icon(text:AppLocalizations.of(context)!.fqs ?? 'FAQ s',iconsdata: Icons.arrow_forward_ios_outlined,),
+                      Text_Icon(text:AppLocalizations.of(context)!.termscondtitions ?? 'Terms & Conditions',iconsdata: Icons.arrow_forward_ios_outlined,),
+
+                      Text_Icon(text:AppLocalizations.of(context)!.termscondtitions ?? 'About App',iconsdata: Icons.arrow_forward_ios_outlined,),
+                      Text_Icon(text:AppLocalizations.of(context)!.privicypolicy ?? 'Privacy Policy',iconsdata: Icons.arrow_forward_ios_outlined,),
+                      Text_Icon(text:AppLocalizations.of(context)!.rateapp ?? 'Rate App',iconsdata: Icons.arrow_forward_ios_outlined,),
+                      Text_Icon(text:AppLocalizations.of(context)!.deleteaccount ?? 'Delete Account',iconsdata: Icons.arrow_forward_ios_outlined,),
 
 
 

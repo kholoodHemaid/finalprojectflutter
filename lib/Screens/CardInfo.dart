@@ -61,12 +61,19 @@ class _CardInfoState extends State<CardInfo> {
                     Padding(
                       padding: const EdgeInsets.all(20),
                       child: Align(
-                        child: IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: Icon(Icons.arrow_back_ios_outlined,
-                              color: Colors.white),
+                        child: Container(
+                          color: Colors.white38,
+                          width: 35,
+                          height: 35,
+                          child: Center(
+                            child: IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(Icons.arrow_back_ios_outlined,
+                                  color: Colors.white),
+                            ),
+                          ),
                         ),
                         alignment: AlignmentDirectional.topStart,
                       ),

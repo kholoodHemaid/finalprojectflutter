@@ -35,7 +35,8 @@
     "aboutapp":"About App",
     "termscondtitions":"Terms & Conditions",
     "privicypolicy":"Privacy Policy",
-    "rate app":"Rate App",
-    "deleteaccount":"Delete Account"
+    "rateapp":"Rate App",
+    "deleteaccount":"Delete Account",
+    "more":"More"
 
 }
