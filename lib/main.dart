@@ -7,6 +7,8 @@ import 'package:finalprojectflutter/Screens/GettingStartedScreen.dart';
 import 'package:finalprojectflutter/Screens/Onboarding1.dart';
 import 'package:finalprojectflutter/Screens/Onboarding2.dart';
 import 'package:finalprojectflutter/Screens/Onboarding3.dart';
+import 'package:finalprojectflutter/Screens/Profile.dart';
+import 'package:finalprojectflutter/Screens/Profile2.dart';
 import 'package:finalprojectflutter/Screens/SignupScreen.dart';
 import 'package:finalprojectflutter/Screens/splashScreen.dart';
 import 'package:flutter/material.dart';
@@ -49,9 +51,10 @@ class MyApp extends StatelessWidget {
       //   '/choicecard': (context) => ChoiceCard(),
      //       '/cardinfo': (context) => CardInfo(),
      //   '/cardinfo__filled': (context) => CardInfo__Filled(),
-      //
+      // '/profile':(context) =>Profile(),
+      //'/profile2':(context) =>Profile2(),
       // },
-      home: CardInfo__Filled(),
+      home: Profile2(),
 
     );
   }

@@ -19,5 +19,15 @@
    "selectservic":"Select Service",
    "carpenter":"Carpenter",
    "imageproblem":"Image Problem",
-   "addorder":"Add Order"
+   "addorder":"Add Order",
+   "order":"ORDER ",
+    "done":"DONE",
+    "p3":"The ORDER has been sent. A technician will ",
+    "p32":"contact you",
+    "gotohome":"Go To Home",
+    "singout":"Sing Out",
+    "languge":"Languge",
+    "myrate":"My Rates",
+    "contact":"Contact Us",
+    "shareapp":"Share APP"
 }
