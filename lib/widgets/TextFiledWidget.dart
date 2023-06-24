@@ -19,7 +19,7 @@ class TextFiledWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
      maxLines: 1,
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.left,
 
       obscureText: obsecure,
       keyboardType: inputType,

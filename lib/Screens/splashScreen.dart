@@ -33,28 +33,28 @@ class Splash_Screen extends StatelessWidget {
 
           //color: Colors.red,
         margin: EdgeInsets.only(left: 100),
-          child: ClipRect(
+          child: Stack(
+           // لتحديد عرض الجزء المراد عرضه من الصورة
 
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.5, // لتحديد عرض الجزء المراد عرضه من الصورة
+            children:
+            [
 
-              child: Align(
-
-
-
-                alignment: Alignment.centerLeft,
-
-                child: ImageFiltered(
+              Positioned(
+               top: 230,
 
 
-                    imageFilter: ImageFilter.blur(),
-                    child: Image.asset('images/Layer_2.png',
-                      //fit: BoxFit.cover,
-                        ),
-                ),
 
+
+              child: ImageFiltered(
+
+
+                  imageFilter: ImageFilter.blur(),
+                  child: Image.asset('images/Layer_2.png',
+                    //fit: BoxFit.cover,
+                      ),
               ),
-            ),
+
+            ),]
           ),
         ),
       ),

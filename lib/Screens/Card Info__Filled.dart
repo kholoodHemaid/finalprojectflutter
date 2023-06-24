@@ -71,10 +71,9 @@ class _CardInfo__FilledState extends State<CardInfo__Filled> {
                       width: double.infinity,
                       height: 40,
                       child: TextButton(onPressed: (){
-                        // Navigator.pushReplacementNamed(
-                        //   context,
-                        //   'gettingstarted1')
-                        // );
+                        Navigator.pushReplacementNamed(
+                          context,'/mainscreen');
+
                       }, child: Text(AppLocalizations.of(context)!.gotohome ??'Go TO Home',style: TextStyle(
                         color: Colors.white,
                       ),

@@ -13,15 +13,31 @@ class SignupScreen extends StatefulWidget {
   State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _SignupScreenState extends State<SignupScreen>
+    with SingleTickerProviderStateMixin{
+  late TabController _tabController;
   bool _isChecked = false;
   bool isPressed = false;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+  void dispose() {
+    // TODO: implement dispose
+    _tabController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
+
       body: SafeArea(
         child: Column(
           children: [
+
             Expanded(
               flex: 2,
               child: Container(
@@ -61,6 +77,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       children: [
                         Text('Home',style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
                           Text('Service',style: TextStyle(color: Colors.white),),
+
                       ],
                     ),
                   ),
@@ -77,27 +94,55 @@ class _SignupScreenState extends State<SignupScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(AppLocalizations.of(context)!.serviceprovider??"Service Provider"),
+                      TabBar(
+
+
+                        onTap: (value) {
+                          print('Tab Index: $value');
+                        },
+                        labelColor: kTextLightColor,
+                        unselectedLabelColor: Colors.black,
+                        indicatorColor: kTextLightColor,
+                        indicatorWeight: 3,
+
+                        labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w300),
+                        indicatorSize: TabBarIndicatorSize.label,
+
+                        controller: _tabController,
+                        tabs: [
+                          Tab(
+                            text: 'Home',
+
                           ),
-                          TextButton(
-                            onPressed: () {
-                              setState(() {
-                                Container(
-                                  width: 10,
-                                  height: 2,
-                                  color: kTextLightColor,
-                                );
-                              });
-                            },
-                            child: Text(AppLocalizations.of(context)!.customer??"Customer"),
+                          Tab(
+                            text: 'Service',
+
                           ),
                         ],
                       ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      //   children: [
+                      //     TextButton(
+                      //
+                      //       onPressed: () {},
+                      //       child: Text(AppLocalizations.of(context)!.serviceprovider??"Service Provider"),
+                      //     ),
+                      //     TextButton(
+                      //       onPressed: () {
+                      //         setState(() {
+                      //           Container(
+                      //             width: 10,
+                      //             height: 2,
+                      //             color: kTextLightColor,
+                      //           );
+                      //         });
+                      //       },
+                      //       child: Text(AppLocalizations.of(context)!.customer??"Customer"),
+                      //     ),
+                      //   ],
+                      // ),
                       SizedBox(height: 17),
                       Padding(
                         padding: const EdgeInsets.all(3),
@@ -155,7 +200,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   //label: Text('$LabelText'),
                                   fillColor: Colors.grey,
                                   hintText: ('********'),
-                                  suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                                  suffixIcon: Icon(Icons.remove_red_eye),
                                   //   fillColor: Colors.black,
 
                                   enabledBorder: OutlineInputBorder(
@@ -311,7 +356,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
             ),
+
+
           ],
+
         ),
       ),
     );

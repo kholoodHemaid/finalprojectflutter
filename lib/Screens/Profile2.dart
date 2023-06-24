@@ -90,7 +90,7 @@ class _Profile2State extends State<Profile2> {
                       child: Center(
                         child: IconButton(
                           onPressed: () {
-                            Navigator.pop(context);
+                            Navigator.popAndPushNamed(context,'/mainscreen');
                           },
                           icon: Icon(Icons.arrow_back_ios_outlined,
                               color: Colors.white,size: 20),

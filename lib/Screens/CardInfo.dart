@@ -1,4 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:finalprojectflutter/Screens/Card%20Info__Filled.dart';
 import 'package:finalprojectflutter/constant.dart';
 import 'package:finalprojectflutter/widgets/TextFiledWidget.dart';
 import 'package:flutter/material.dart';
@@ -207,10 +208,10 @@ class _CardInfoState extends State<CardInfo> {
                 width: double.infinity,
                 height: 40,
                 child: TextButton(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => ThirdScreen()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CardInfo__Filled()),
+                  );
                 }, child: Text(AppLocalizations.of(context)!.addorder ??'Add Order',style: TextStyle(
                   color: Colors.white,
                 ),

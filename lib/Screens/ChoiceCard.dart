@@ -1,4 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:finalprojectflutter/Screens/CardInfo.dart';
 import 'package:finalprojectflutter/constant.dart';
 import 'package:finalprojectflutter/widgets/MyCard.dart';
 import 'package:flutter/material.dart';
@@ -200,10 +201,10 @@ class _ChoiceCardState extends State<ChoiceCard> {
                 width: double.infinity,
                 height: 40,
                 child: TextButton(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => ThirdScreen()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CardInfo()),
+                  );
                 }, child: Text(AppLocalizations.of(context)!.next ??'Next',style: TextStyle(
                   color: Colors.white,
                 ),
